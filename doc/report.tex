@@ -1,6 +1,9 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[conference,draft]{IEEEtran}
 
+%\usepackage{amsmath}
 \usepackage{booktabs} % For formal tables
+
+\usepackage{cite}
 
 \usepackage{blindtext}
 
@@ -15,6 +18,106 @@ Email:
 
 \maketitle
 
-\Blinddocument
+\section{Introduction}
+
+%Motivate and abstractly describe the problem you are addressing and how you are addressing it.
+%What is the problem?
+%Why is it important?
+%What is your basic approach?
+%A short discussion of how it fits into related work in the area is also desirable.
+%Summarize the basic results and conclusions that you will present.
+
+Machine learning is emerging in the insurance industry and is being applied
+across multiple areas including the interpretation of data, business operations
+and driver safety. One key application is claim prediction. Inaccuracies in car
+insurance company's claim predictions raise the cost of insurance for good
+drivers and reduce the price for bad ones. A more accurate prediction will
+allow insurers to further tailor their prices, and hopefully make auto
+insurance coverage more accessible to more drivers.
+
+In this report, we focus on \emph{Porto Seguro's Safe Driver Prediction}\cite{Domingos:2012:FUT:2347736.2347755}.
+competition hosted on Kaggle, predicting the possibility that an auto insurance
+policy holder will file an insurance claim next year.
+
+The organization of the following report is as follows. In section II, we will
+formally define the problem to solve and discuss the theoretical principle of
+the algorithm we used. Then we will analyze the data feature and our method of
+feature engineering in section III. After that, the experimental results are
+shown and analyzed in section IV. Finally, we will discuss related works and
+conclude the report.
+
+\section{Problem Definition and Algorithm}
+
+\subsection{Task Definition}
+
+Precisely define the problem you are addressing (i.e. formally specify the
+inputs and outputs). Elaborate on why this is an interesting and important
+problem. 
+
+\subsection{Algorithm Definition}
+
+Describe in reasonable detail the algorithm you are using to address this
+problem. A psuedocode description of the algorithm you are using is frequently
+useful. Trace through a concrete example, showing how your algorithm processes
+this example. The example should be complex enough to illustrate all of the
+important aspects of the problem but simple enough to be easily understood. If
+possible, an intuitively meaningful example is better than one with meaningless
+symbols. 
+
+\section{Feature Analysis and Engineering}
+
+Feature Engineering.
+
+\section{Experimental Evaluation}
+
+\subsection{Methodology}
+
+What are criteria you are using to evaluate your method? What specific
+hypotheses does your experiment test? Describe the experimental methodology
+that you used. What are the dependent and independent variables? What is the
+training/test data that was used, and why is it realistic or interesting?
+Exactly what performance data did you collect and how are you presenting and
+analyzing it? Comparisons to competing methods that address the same problem
+are particularly useful. 
+
+\subsection{Results}
+
+Present the quantitative results of your experiments. Graphical data
+presentation such as graphs and histograms are frequently better than tables.
+What are the basic differences revealed in the data. Are they statistically
+significant? 
+
+\subsection{Discussion}
+
+Is your hypothesis supported? What conclusions do the results support about the
+strengths and weaknesses of your method compared to other methods? How can the
+results be explained in terms of the underlying properties of the algorithm
+and/or the data. 
+
+\section{Related Work}
+
+Answer the following questions for each piece of related work that addresses
+the same or a similar problem. What is their problem and method? How is your
+problem and method different? Why is your problem and method better? 
+
+\section{Future Work}
+
+What are the major shortcomings of your current method? For each shortcoming,
+propose additions or enhancements that would help overcome it. 
+
+\section{Conclusion}
+
+Briefly summarize the important results and conclusions presented in the paper.
+What are the most important points illustrated by your work? How will your
+results improve future research and applications in the area? 
+
+\section{Bilbiography}
+
+Be sure to include a standard, well-formated, comprehensive bibliography with
+citations from the text referring to previously published papers in the
+scientific literature that you utilized or are related to your work.
+
+\bibliography{report.bib}{}
+\bibliographystyle{plain}
 
 \end{document}
