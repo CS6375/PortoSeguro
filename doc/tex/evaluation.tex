@@ -16,20 +16,29 @@
 % are particularly useful. 
 % }\normalsize
 
-We use per-class accuracy and Gini Coefficient to evaluate out model.
+We used per-class accuracy, AUC and Normalized Gini Coefficient to evaluate out model.
 
 \subsubsection{Per-Class Accuracy}
 
-Accuracy simply measures how often the classifier makes the correct prediction. It’s the ratio between the number of correct predictions and the total number of predictions (the number of data points in the test set):
-\begin{IEEEeqnarray}{Rl} 
+Accuracy simply measures how often the classifier makes the correct prediction. It’s the ratio between the number of correct predictions and the total number of predictions (the number of data points in the test set)\cite{Alice:2015:Evaluating}:
+\begin{IEEEeqnarray}{C} 
 accuracy = \frac{\mathrm{\#\ correct\ predictions}}{\mathrm{\#\ total\ data\ points}}\IEEEnonumber
 \end{IEEEeqnarray}
 
 Per-class accuracy is the average of the accuracy for each class. By using per-class accuracy, we can have a better understanding of the model if the target class was dominated by one label.
 
-\subsubsection{Gini Coefficient}
+\subsubsection{Normalized Gini Coefficient and AUC}
 
-to-do.
+The Normalized Gini coefficient, (named for the similar Gini coefficient/index used in Economics, which originally developed by Italian statistician and sociologist Corrado Gini\cite{Gini:1912}), measures the inequality among values of a frequency distribution (for example, levels of income)\cite{Gini:Wikipedia}. It is most commonly defined as twice the area between the ROC curve and the diagonal (with this area being taken as negative in the rare event that the curve lies below the diagonal).
+
+AUC stands for area under the curve.
+
+The normalized Gini coefficient and AUC are closely related. When using normalized units, the AUC is equal to the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming 'positive' ranks higher than 'negative')\cite{Fawcett:2006:IRA:1159473.1159475}. Elementary geometry shows that 
+\begin{IEEEeqnarray}{C} 
+Gini = 2 \times \mathrm{AUC} - 1.
+\end{IEEEeqnarray}
+
+The competition used normalized Gini coefficient to measure participants' submission performance. In our experiment, we worked in terms of AUC, but the results apply equally to the Gini coefficient.
 
 % \subsection{Results}
 
