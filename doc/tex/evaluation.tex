@@ -1,0 +1,52 @@
+\documentclass{standalone}
+
+\begin{document}
+
+\section{Experimental Evaluation}
+
+\subsection{Methodology}
+
+% \scriptsize{
+% What are criteria you are using to evaluate your method? What specific
+% hypotheses does your experiment test? Describe the experimental methodology
+% that you used. What are the dependent and independent variables? What is the
+% training/test data that was used, and why is it realistic or interesting?
+% Exactly what performance data did you collect and how are you presenting and
+% analyzing it? Comparisons to competing methods that address the same problem
+% are particularly useful. 
+% }\normalsize
+
+We use per-class accuracy and Gini Coefficient to evaluate out model.
+
+\subsubsection{Per-Class Accuracy}
+
+Accuracy simply measures how often the classifier makes the correct prediction. It’s the ratio between the number of correct predictions and the total number of predictions (the number of data points in the test set):
+\begin{IEEEeqnarray}{Rl} 
+accuracy = \frac{\mathrm{\#\ correct\ predictions}}{\mathrm{\#\ total\ data\ points}}\IEEEnonumber
+\end{IEEEeqnarray}
+
+Per-class accuracy is the average of the accuracy for each class. By using per-class accuracy, we can have a better understanding of the model if the target class was dominated by one label.
+
+\subsubsection{Gini Coefficient}
+
+to-do.
+
+% \subsection{Results}
+
+% \scriptsize{
+% Present the quantitative results of your experiments. Graphical data
+% presentation such as graphs and histograms are frequently better than tables.
+% What are the basic differences revealed in the data. Are they statistically
+% significant? 
+% }\normalsize
+
+% \subsection{Discussion}
+
+% \scriptsize{
+% Is your hypothesis supported? What conclusions do the results support about the
+% strengths and weaknesses of your method compared to other methods? How can the
+% results be explained in terms of the underlying properties of the algorithm
+% and/or the data. 
+% }\normalsize
+
+\end{document}

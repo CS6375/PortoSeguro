@@ -1,0 +1,63 @@
+\documentclass{standalone}
+
+\begin{document}
+
+\section{Problem Definition and Algorithm}
+
+\subsection{Task Definition}
+
+%Precisely define the problem you are addressing (i.e. formally specify the
+%inputs and outputs). Elaborate on why this is an interesting and important
+%problem. 
+
+A machine learning problem is defined as to learn from experience $E$ with
+respect to some class of tasks $T$ and performance measure $P$, if its
+performance at tasks in $T$, as measured by $P$, improves with experience
+$E$\cite{Mitchell:1997:ML:541177}.
+The claim prediction problem can be defined as follow:
+\begin{itemize}[\IEEEsetlabelwidth{Z}] 
+    \item[$E$] previous year's policy holders' information and whether or not a
+        claim was filed for that policy holder.
+    \item[$T$] predicting the possibility that an auto insurance policy
+        holder will file an insurance claim next year.
+    \item[$P$] the accuracies and Gini Coefficient was used to measure the
+        effectiveness of models.
+\end{itemize}
+
+\subsection{Algorithm Definition}
+
+We used logistic regression, neural network in our model building. In this
+section, we will discuss the theoretical foundation of these algorithms.
+
+% \scriptsize{
+% Describe in reasonable detail the algorithm you are using to address this
+% problem. A psuedocode description of the algorithm you are using is frequently
+% useful. Trace through a concrete example, showing how your algorithm processes
+% this example. The example should be complex enough to illustrate all of the
+% important aspects of the problem but simple enough to be easily understood. If
+% possible, an intuitively meaningful example is better than one with meaningless
+% symbols.
+% }\normalsize
+
+\subsubsection{Logistic Regression}
+
+Logistic Regression is an approach to learning functions of the form $f:X\rightarrow Y$\cite{Mitchell:2016} or in our case $P(Y|X)$ where $Y$ is discrete-valued, and $X = \langle X_1 ...X_n\rangle$ is any vector containing discrete and continuous variables. The parametric model assumed by Logistic Regression in the case where Y is boolean is:
+\begin{IEEEeqnarray}{Rl} 
+P(Y=1|X)&=\frac{1}{1+\exp(w_0+\sum_{i=1}^nw_iX_i)}\IEEEnonumber\\
+P(Y=0|X)&=\frac{\exp(w_0+\sum_{i=1}^nw_iX_i)}{1+\exp(w_0+\sum_{i=1}^nw_iX_i)}\IEEEnonumber
+\end{IEEEeqnarray}
+
+One reasonable approach to training Logistic Regression is to choose parameter values that maximize the conditional data likelihood. We also used regularization to reduce the overfitting problem. The penalized log likelihood function is as followed:
+\begin{IEEEeqnarray}{C} 
+W \leftarrow \arg\max_W\sum_l\ln{P(Y^l|X^l,W)}-\frac{\lambda}{2}||W||^2\IEEEnonumber
+\end{IEEEeqnarray}
+where the last term is a penalty proportional to the squared magnitude of $W$.
+
+In general, the algorithm used gradient ascent to repeatedly update the weights in the direction of the gradient, on each iteration changing every weight $w_i$, beginning with initial weights of zero, according to:
+\begin{IEEEeqnarray}{C} 
+w_i \leftarrow w_i+\eta\sum_lX_i^l(Y^l-\hat{P}(Y^l=1|X^l,W))-\eta\lambda{w_i}\IEEEnonumber
+\end{IEEEeqnarray}
+where $\eta$ is a small constant which determines the step size. The actual implementation of scikit learn library includes multiple solvers, such as Stochastic Average Gradient (SAG) descent, SAGA and Broyden-Fletcher-Goldfarb-Shanno (LBFGS).
+
+
+\end{document}
