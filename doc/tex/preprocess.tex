@@ -10,8 +10,44 @@ specific policy holder and the columns describe their features. The target
 variable is named \lstinline{target} here and it indicates whether this policy
 holder made an insurance claim in the past.
 
+\subsection{Data Overview}
+
+In the train and test data, features that belong to similar groupings are
+tagged as such in the feature names (e.g., \lstinline{ind}, \lstinline{reg},
+\lstinline{car}, \lstinline{calc}). In addition, feature names include the
+postfix \lstinline{bin} to indicate binary features and \lstinline{cat} to
+indicate categorical features. Features without these designations are either
+continuous or ordinal.
+
+\begin{table}[!h]
+\renewcommand{\arraystretch}{1.3}
+\caption{Feature Counts in Each Category and Type}\label{table_example}
+\centering
+\begin{tabular}{c|ccc}
+\hline
+\bfseries Type & \bfseries  Binary & \bfseries  Categorical & \bfseries  Continuous / Oridinal \\ \hline
+\ttfamily ind & 11 & 3 & 4 \\ \hline
+reg & & &  \\ \hline
+car & & &  \\ \hline
+calc & & &  \\ \hline
+\end{tabular}
+
+\begin{tabular}{c|cccc}
+\hline
+Type & \bfseries ind & \bfseries reg & car & calc \\ \hline
+Binary & & & & \\ \hline
+Categorical & & & & \\ \hline
+Continuous & & & & \\ \hline
+Ordinal & & & & \\ \hline
+\end{tabular}
+\end{table}
+
+Although feature's categories are provided, the meaning of each feature remains 
 
 \subsection{Missing Value Mechanism and Data Imputation}
+
+Values of -1 indicate that the feature was missing from
+the observation.
 
 
 
