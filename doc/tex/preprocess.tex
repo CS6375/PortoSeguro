@@ -42,15 +42,24 @@ continuous or ordinal. Feature count in each category and type are shown in \cre
 % \end{tabular}
 \end{table}
 
-Although feature's categories are provided, the meaning of each feature remains unknown. Some participants have guessed the meaning of several features, for example the `binary' variables  \lstinline{ps_ind_06-10} are one-hot encoded, and \lstinline{ps_car_13} might be car's mileage.
+Although feature's categories are provided, the meaning of each feature remains unknown. Some participants have guessed the meaning of several features, for example the `binary' variables  \lstinline{ps_ind_06-10} are \emph{one-hot encoded}, and \lstinline{ps_car_13} might be car's mileage.
 Our experiment did not take these information into consideration.
+
+\subsubsection{Category \lstinline{ind}}
+
+\lstinline{ind} Features' distribution are shown as histograms in \cref{hist_ind}.
 
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=\textwidth]{fig/ind_col.pdf}
 \caption{Histogram for the \lstinline{ind} Attributes.}
-\label{fig_ind}
+\label{hist_ind}
 \end{figure*}
+
+\subsubsection{Category \lstinline{reg}}
+
+\lstinline{reg
+} Features' distribution are shown as histograms in \cref{hist_ind}.
 
 \begin{figure}[!t]
 \centering
@@ -72,6 +81,34 @@ Our experiment did not take these information into consideration.
 \caption{Histogram for the \lstinline{calc} Attributes.}
 \label{fig_calc}
 \end{figure*}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.5\textwidth]{fig/corr_ind_col.pdf}
+\caption{Correlation for the \lstinline{ind} Attributes.}
+\label{hist_ind}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.2\textwidth]{fig/corr_reg_col.pdf}
+\caption{Histogram for the \lstinline{reg} Attributes.}
+\label{fig_reg}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.5\textwidth]{fig/corr_car_col.pdf}
+\caption{Histogram for the \lstinline{car} Attributes.}
+\label{fig_car}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.5\textwidth]{fig/corr_calc_col.pdf}
+\caption{Histogram for the \lstinline{calc} Attributes.}
+\label{fig_calc}
+\end{figure}
 
 \subsection{Missing Value Mechanism and Data Imputation}
 
