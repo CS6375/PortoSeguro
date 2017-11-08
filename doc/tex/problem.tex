@@ -29,16 +29,6 @@ The claim prediction problem can be defined as follow:
 We used logistic regression, neural network in our model building. In this
 section, we will discuss the theoretical foundation of these algorithms.
 
-% \scriptsize{
-% Describe in reasonable detail the algorithm you are using to address this
-% problem. A psuedocode description of the algorithm you are using is frequently
-% useful. Trace through a concrete example, showing how your algorithm processes
-% this example. The example should be complex enough to illustrate all of the
-% important aspects of the problem but simple enough to be easily understood. If
-% possible, an intuitively meaningful example is better than one with meaningless
-% symbols.
-% }\normalsize
-
 \subsubsection{Logistic Regression}
 
 Logistic Regression is an approach to learning functions of the form $f:X\rightarrow Y$\cite{Mitchell:2016} or in our case $P(Y|X)$ where $Y$ is discrete-valued, and $X = \langle X_1 ...X_n\rangle$ is any vector containing discrete and continuous variables. The parametric model assumed by Logistic Regression in the case where Y is boolean is:
@@ -59,5 +49,8 @@ w_i \leftarrow w_i+\eta\sum_lX_i^l(Y^l-\hat{P}(Y^l=1|X^l,W))-\eta\lambda{w_i}\IE
 \end{IEEEeqnarray}
 where $\eta$ is a small constant which determines the step size. The actual implementation of scikit learn library includes multiple solvers, such as Stochastic Average Gradient (SAG) descent, SAGA and Broyden-Fletcher-Goldfarb-Shanno (LBFGS).
 
+\subsubsection{Neural Network}
+
+Artificial neural networks (ANNs)\cite{ANN:Wikipedia}, a form of connectionism, are computing systems inspired by the biological neural networks that constitute animal brains. Such systems learn (progressively improve performance) to do tasks by considering examples, generally without task-specific programming. For example, in image recognition, they might learn to identify images that contain cats by analyzing example images that have been manually labeled as ``cat'' or ``no cat'' and using the analytic results to identify cats in other images. They have found most use in applications difficult to express in a traditional computer algorithm using rule-based programming.
 
 \end{document}
