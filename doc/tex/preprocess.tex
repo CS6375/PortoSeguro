@@ -45,69 +45,73 @@ continuous or ordinal. Feature count in each category and type are shown in \cre
 Although feature's categories are provided, the meaning of each feature remains unknown. Some participants have guessed the meaning of several features, for example the `binary' variables  \lstinline{ps_ind_06-10} are \emph{one-hot encoded}, and \lstinline{ps_car_13} might be car's mileage.
 Our experiment did not take these information into consideration.
 
-\subsubsection{Category \lstinline{ind}}
+\subsubsection{Distribution Analysis}
 
-\lstinline{ind} Features' distribution are shown as histograms in \cref{hist_ind}.
+Features' distribution for \lstinline{ind}, \lstinline{reg}, \lstinline{car}, \lstinline{calc} are shown as histograms in \cref{hist_ind}, \cref{hist_reg}, \cref{hist_car} and \cref{hist_calc} respectfully.
 
-\begin{figure*}[!t]
+\textbf{TO-DO: SOME ANALYSIS NEEDED HERE.}
+
+\begin{figure*}[!ht]
 \centering
 \includegraphics[width=\textwidth]{fig/ind_col.pdf}
 \caption{Histogram for the \lstinline{ind} Attributes.}
 \label{hist_ind}
 \end{figure*}
 
-\subsubsection{Category \lstinline{reg}}
-
-\lstinline{reg
-} Features' distribution are shown as histograms in \cref{hist_ind}.
-
-\begin{figure}[!t]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=.5\textwidth]{fig/reg_col.pdf}
 \caption{Histogram for the \lstinline{reg} Attributes.}
-\label{fig_reg}
+\label{hist_reg}
 \end{figure}
 
-\begin{figure*}[!t]
+\begin{figure*}[!ht]
 \centering
 \includegraphics[width=\textwidth]{fig/car_col.pdf}
 \caption{Histogram for the \lstinline{car} Attributes.}
-\label{fig_car}
+\label{hist_car}
 \end{figure*}
 
-\begin{figure*}[!t]
+\begin{figure*}[!ht]
 \centering
 \includegraphics[width=\textwidth]{fig/calc_col.pdf}
 \caption{Histogram for the \lstinline{calc} Attributes.}
-\label{fig_calc}
+\label{hist_calc}
 \end{figure*}
+
+
+\subsubsection{Correlation Analysis}
+
+Features' Correlation within each category for \lstinline{ind}, \lstinline{reg}, \lstinline{car}, \lstinline{calc} are shown as histograms in \cref{corr_ind}, \cref{corr_reg}, \cref{corr_car} and \cref{corr_calc} respectfully.
+
+\textbf{TO-DO: SOME ANALYSIS NEEDED HERE.}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=.5\textwidth]{fig/corr_ind_col.pdf}
 \caption{Correlation for the \lstinline{ind} Attributes.}
-\label{hist_ind}
+\label{corr_ind}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=.2\textwidth]{fig/corr_reg_col.pdf}
 \caption{Histogram for the \lstinline{reg} Attributes.}
-\label{fig_reg}
+\label{corr_reg}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=.5\textwidth]{fig/corr_car_col.pdf}
 \caption{Histogram for the \lstinline{car} Attributes.}
-\label{fig_car}
+\label{corr_car}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=.5\textwidth]{fig/corr_calc_col.pdf}
 \caption{Histogram for the \lstinline{calc} Attributes.}
-\label{fig_calc}
+\label{corr_calc}
 \end{figure}
 
 \subsection{Missing Value Mechanism and Data Imputation}
