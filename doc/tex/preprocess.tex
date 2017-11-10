@@ -12,6 +12,8 @@ holder made an insurance claim in the past.
 
 \subsection{Data Overview}
 
+In total, there are $595212$ training data instances and $892816$ testing data instance. Since it's a competition, testing data had no \lstinline{target} label. We cannot test our model accuracy based on testing data. In stead, we would use k-fold and cross validation on the training data to evaluate our model, which is discussed in more detail in \cref{evam}.
+
 In the train and test data, features that belong to similar groupings are
 tagged as such in the feature names (e.g., \lstinline{ind}, \lstinline{reg},
 \lstinline{car}, \lstinline{calc}). In addition, feature names include the
