@@ -84,21 +84,20 @@ Scikit learn provides multiple variations of k-fold\cite{scikit-learn}, for exam
 We chose \verb|StratifiedKFold| in out implementations during training phase.
 
 \subsection{Results}
+The best parameters of each model in our experiment is shown in \cref{performance}.
 
-\scriptsize{
-Present the quantitative results of your experiments. Graphical data
-presentation such as graphs and histograms are frequently better than tables.
-What are the basic differences revealed in the data. Are they statistically
-significant? 
-}\normalsize
-
-\subsection{Discussion}
-
-\scriptsize{
-Is your hypothesis supported? What conclusions do the results support about the
-strengths and weaknesses of your method compared to other methods? How can the
-results be explained in terms of the underlying properties of the algorithm
-and/or the data. 
-}\normalsize
+\begin{table*}[!t]
+\centering
+\caption{Performance of Each Models}\label{performance}
+\begin{tabular}{llcc}
+\toprule
+\bfseries Model & \bfseries Optimal Parameters &Training & Submission\\\midrule
+Gradient Boost & \verb|'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200| & 0.283 & 0.277  \\\hline
+\multirow{2}{*}{Logistic Regression} & \verb|'C': 0.1, 'fit_intercept': False, 'penalty': 'l1'| & \multirow{2}{*}{0.266} & \multirow{2}{*}{0.257}  \\
+& \verb|'random_state': 0, 'solver': 'liblinear'| &  & \\\hline
+\multirow{2}{*}{Random Forest} & \verb|'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10| & \multirow{2}{*}{0.263} & \multirow{2}{*}{0.258} \\
+& \verb|'n_estimators': 40, 'warm_start': False| &&\\\bottomrule
+\end{tabular}
+\end{table*}
 
 \end{document}
