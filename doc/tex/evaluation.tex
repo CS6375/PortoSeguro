@@ -4,6 +4,24 @@
 
 \section{Experimental Evaluation}\label{evam}
 
+\subsection{Hyperparameter Tuning}
+
+Hyper-parameters are parameters that are not directly learnt within estimators. Hyperparameter settings could have a big impact on the prediction accuracy of the trained model. Optimal hyperparameter settings often differ for different datasets\cite{Alice:2015:Evaluating}.
+
+\begin{itemize}
+    \item Grid Search, which is commonly accepted as naive
+because the number of required samples grows exponentially
+in dimension, assuming the number of points per axis is held fixed. Though most expensive in terms of total computation time, if run in parallel, it is fast in terms of wall clock time.
+\cite{lavalle2004relationship} has provided some insights into the relationship between
+classical grid search and probabilistic roadmaps.
+
+\item Random Search, which is a slightly variation on grid search. In stead of searching over the entire grid, random search only evaluates a random sample of points on the grid.
+\cite{bergstra2012random} has shown that random search is  more efficient than grid search for hyper-parameter optimization
+in the case of several learning algorithms on several data sets.
+\end{itemize}
+
+Scikit-learn provides both Exhaustive Grid Search\cite{scikit:grid} and Randomized Parameter Optimization\cite{scikit:random} class. To gain more insight about the hyperparameter tuning process (though might be useless), we used \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterGrid.html#sklearn.model_selection.ParameterGrid}{\verb|ParameterGrid} in our implementations. Test results of all parameter sets are included in log files. \verb||
+
 \subsection{Evaluation Metrics}
 
 % \scriptsize{
@@ -29,11 +47,19 @@ Per-class accuracy is the average of the accuracy for each class. By using per-c
 
 \subsubsection{Normalized Gini Coefficient and AUC}
 
-The Normalized Gini coefficient, (named for the similar Gini coefficient/index used in Economics, which originally developed by Italian statistician and sociologist Corrado Gini\cite{Gini:1912}), measures the inequality among values of a frequency distribution (for example, levels of income)\cite{Gini:Wikipedia}. It is most commonly defined as twice the area between the ROC curve and the diagonal (with this area being taken as negative in the rare event that the curve lies below the diagonal).
+The Normalized Gini coefficient, (named for the similar Gini coefficient/index used in Economics, which originally developed by Italian statistician and sociologist Corrado Gini\cite{Gini:1912}), measures the inequality among values of a frequency distribution (for example, levels of income)\cite{Gini:Wikipedia}. It is most commonly defined as twice the area between the ROC curve and the diagonal (with this area being taken as negative in the rare event that the curve lies below the diagonal)\cite{10.2307/1924845}.
 
-AUC stands for area under the curve.
+\Cref{gini_graph} shows that the Gini coefficient is equal to the area marked $A$ divided by the sum of the areas marked $A$ and $B$, that is, $Gini = A / (A + B)$. It is also equal to $2A$ and to $1 - 2B$ due to the fact that $A + B = 0.5$ (since the axes scale from 0 to 1).
 
-The normalized Gini coefficient and AUC are closely related. When using normalized units, the AUC is equal to the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming 'positive' ranks higher than 'negative')\cite{Fawcett:2006:IRA:1159473.1159475}. Elementary geometry shows that 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.5\textwidth]{fig/gini.pdf}
+\caption{Graphical Representation of the Gini Coefficient}
+\label{gini_graph}
+\end{figure}
+
+The normalized Gini coefficient and AUC are closely related. AUC stands for area under the curve.
+When using normalized units, the AUC is equal to the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming `positive' ranks higher than `negative')\cite{Fawcett:2006:IRA:1159473.1159475}. Elementary geometry shows that 
 \begin{IEEEeqnarray}{C} 
 Gini = 2 \times \mathrm{AUC} - 1.
 \end{IEEEeqnarray}
@@ -46,23 +72,33 @@ The competition used normalized Gini coefficient to measure participants' submis
 
 We use k-fold cross-validation as our validation technique.
 
+In k-fold cross-validation, we first divide the training dataset into $k$ folds. For a given hyperparameter setting, each of the $k$ folds takes turns being the hold-out validation set; a model is trained on the rest of the $k – 1$ folds and measured on the held-out fold. The overall performance is taken to be the average of the performance on all $k$ folds. Repeat this procedure for all of the hyperparameter settings that need to be evaluated, then pick the hyperparameters that resulted in the highest $k$-fold average.
 
-% \subsection{Results}
+Scikit learn provides multiple variations of k-fold\cite{scikit-learn}, for example, 
+\begin{itemize}
+    \item \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold}{\verb|KFold}, which divides all the samples in k groups of samples, called folds of equal sizes (if possible). The prediction function is learned using $k - 1$ folds, and the fold left out is used for test.
+    \item \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html#sklearn.model_selection.LeaveOneOut}{\verb|LeaveOneOut}, which is basically special simple case when $k = n$ in \verb|KFold|.
+    \item \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold}{\verb|StratifiedKFold}, which returns \emph{stratified} folds, i.e., each set contains approximately the \emph{same} percentage of samples of each target class as the complete set.
+\end{itemize}
 
-% \scriptsize{
-% Present the quantitative results of your experiments. Graphical data
-% presentation such as graphs and histograms are frequently better than tables.
-% What are the basic differences revealed in the data. Are they statistically
-% significant? 
-% }\normalsize
+We chose \verb|StratifiedKFold| in out implementations during training phase.
 
-% \subsection{Discussion}
+\subsection{Results}
 
-% \scriptsize{
-% Is your hypothesis supported? What conclusions do the results support about the
-% strengths and weaknesses of your method compared to other methods? How can the
-% results be explained in terms of the underlying properties of the algorithm
-% and/or the data. 
-% }\normalsize
+\scriptsize{
+Present the quantitative results of your experiments. Graphical data
+presentation such as graphs and histograms are frequently better than tables.
+What are the basic differences revealed in the data. Are they statistically
+significant? 
+}\normalsize
+
+\subsection{Discussion}
+
+\scriptsize{
+Is your hypothesis supported? What conclusions do the results support about the
+strengths and weaknesses of your method compared to other methods? How can the
+results be explained in terms of the underlying properties of the algorithm
+and/or the data. 
+}\normalsize
 
 \end{document}
