@@ -1,11 +1,11 @@
-import pandas as pd
-import numpy as np
-import pickle
-from tqdm import tqdm
 from logging import StreamHandler, DEBUG, Formatter, FileHandler, getLogger
+
+import numpy as np
+import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.metrics import log_loss, roc_curve, auc
 from sklearn.model_selection import StratifiedKFold, ParameterGrid
-from sklearn.metrics import log_loss, roc_auc_score, roc_curve, auc
+from tqdm import tqdm
 
 from load_data import load_train_data, load_test_data
 
@@ -85,9 +85,6 @@ if __name__ == '__main__':
             logger.debug('   logloss: {}, gini: {}'.format(sc_logloss, sc_gini))
             break
 
-        with open(DIR + 'all_preds.pkl', 'wb') as f:
-            pickle.dump(all_preds, f, -1)
-
         sc_logloss = np.mean(list_logloss_score)
         sc_gini = np.mean(list_gini_score)
         if min_score > sc_gini:
@@ -102,12 +99,8 @@ if __name__ == '__main__':
 
     clf = GradientBoostingClassifier(**min_params)
     clf.fit(x_train, y_train)
-    with open(DIR + 'model.pkl', 'wb') as f:
-        pickle.dump(clf, f, -1)
 
     logger.info('train end')
-    with open(DIR + 'model.pkl', 'rb') as f:
-        clf = pickle.load(f)
 
     df = load_test_data()
     for col in use_cols:
@@ -118,8 +111,6 @@ if __name__ == '__main__':
 
     logger.info('test data load end {}'.format(x_test.shape))
     pred_test = clf.predict_proba(x_test)[:, 1]
-    with open(DIR + 'pred_test.pkl', 'wb') as f:
-        pickle.dump(pred_test, f, -1)
 
     df_submit = pd.read_csv(SAMPLE_SUBMIT_FILE).sort_values('id')
     df_submit['target'] = pred_test
