@@ -19,4 +19,12 @@ Scikit-learn provide a \emph{Principal component analysis} (\verb|PCA|) library,
 Another method with great potential is t-Distributed Stochastic Neighbor Embedding (t-SNE)\cite{van2014accelerating}, a (prize-winning) technique for dimensionality reduction that is particularly well suited for the visualization of high-dimensional datasets\cite{tsne}. Unlike PCA, t-SNE preserves the local structure of data points.
 The problem with scikit-learn implementation of t-SNE is its lack of memory optimization and running time is unbearably high. There are some optimized implementation in other language like Julia\cite{tsne:julia} and Java\cite{tsne:java}. Further works can try on these library for Dimension Reduction.
 
+\subsubsection{More Powerful Library, Models and Machines}
+
+The goodness of the implementation of library is vital in model's performance. It's meaningless to use the `best' model if the training phase lasts forever. Also, different libraries have implementation of same model with greatly differed efficiency.
+
+In our experiment, besides the model listed above, we also tried the neural network model implemented in Scikit-learn, i.e., \verb|MLPClassifier|\cite{scikit:nn} class. No matter what parameters we tried, the results were either the training phase was unbearably long, or the Gini scores were not better than just random guess. However, as the competition ended, it turned out that the second place model was built on deep learning neural network using a different library (Keras\cite{chollet2017keras}) based on tensorflow\cite{abadi2016tensorflow}.
+
+Hence, a notable future work direction would be trying to build the model using more powerful library and models.
+
 \end{document}

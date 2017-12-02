@@ -70,11 +70,11 @@ The competition used normalized Gini coefficient to measure participants' submis
 
 % \subsubsection{K-Fold Cross-Validation}
 
-We use k-fold cross-validation as our validation technique.
+We use $k$-fold cross-validation as our validation technique.
 
-In k-fold cross-validation, we first divide the training dataset into $k$ folds. For a given hyperparameter setting, each of the $k$ folds takes turns being the hold-out validation set; a model is trained on the rest of the $k – 1$ folds and measured on the held-out fold. The overall performance is taken to be the average of the performance on all $k$ folds. Repeat this procedure for all of the hyperparameter settings that need to be evaluated, then pick the hyperparameters that resulted in the highest $k$-fold average.
+In $k$-fold cross-validation, we first divide the training dataset into $k$ folds. For a given hyperparameter setting, each of the $k$ folds takes turns being the hold-out validation set; a model is trained on the rest of the $k - 1$ folds and measured on the held-out fold. The overall performance is taken to be the average of the performance on all $k$ folds. Repeat this procedure for all of the hyperparameter settings that need to be evaluated, then pick the hyperparameters that resulted in the highest $k$-fold average.
 
-Scikit learn provides multiple variations of k-fold\cite{scikit-learn}, for example, 
+Scikit learn provides multiple variations of $k$-fold\cite{scikit-learn}, for example, 
 \begin{itemize}
     \item \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold}{\verb|KFold}, which divides all the samples in k groups of samples, called folds of equal sizes (if possible). The prediction function is learned using $k - 1$ folds, and the fold left out is used for test.
     \item \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html#sklearn.model_selection.LeaveOneOut}{\verb|LeaveOneOut}, which is basically special simple case when $k = n$ in \verb|KFold|.
@@ -91,7 +91,7 @@ The best parameters of each model in our experiment is shown in \cref{performanc
 \caption{Performance of Each Models}\label{performance}
 \begin{tabular}{llcc}
 \toprule
-\bfseries Model & \bfseries Optimal Parameters &Training & Submission\\\midrule
+\bfseries Model & \bfseries Optimal Parameters &Public Dataset & Private Dataset\\\midrule
 Gradient Boost & \verb|'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200| & 0.283 & 0.277  \\\hline
 \multirow{2}{*}{Logistic Regression} & \verb|'C': 0.1, 'fit_intercept': False, 'penalty': 'l1'| & \multirow{2}{*}{0.266} & \multirow{2}{*}{0.257}  \\
 & \verb|'random_state': 0, 'solver': 'liblinear'| &  & \\\hline
@@ -99,5 +99,16 @@ Gradient Boost & \verb|'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200| 
 & \verb|'n_estimators': 40, 'warm_start': False| &&\\\bottomrule
 \end{tabular}
 \end{table*}
+
+The result in public dataset performs best in \emph{Gradient Boosting}, then it is almost same for \emph{Logistic Regression} and \emph{Random Forest}. It is the same on private dataset.
+
+Weak learners have high bias and low variance. For a decision tree, the weak learners are shallow trees and sometimes just stumps. Boosting mainly reduces bias to reduce error. On the other hand, \emph{Random Forest} tackles error by reducing variance in the opposite way as \emph{Gradient Boosting} does. As a result, it cannot deal with bias.
+\emph{Logistic Regression} is some way like Gradient Boosting. It depends on the data set and type of features to know which model performs better.
+
+For getting the best result, we adjusted the max depth of \emph{Gradient Boosting} to 4 after times of attempts, and since this model works well for overfitting we set the estimator to higher value as 200. We also used the `deviance' value for the loss parameter to optimize the lost function just like the way \emph{Logistic Regression}. This may get the conclusion that the comparison of \emph{Gradient Boosting} and \emph{Logistic Regression} depends on the dataset and features.
+
+In \emph{Logistic Regression}, we set the C parameter to only $0.1$ to inverse the regularization strength to prevent overfitting. The random state is set to $0$ to control the random for every attempt to get the same and best result, compared to not setting random state or other state values, when dividing training set and testing set, avoid mess when in the next attempt. The parameter of \verb|solver| is set to \verb|liblinear| to work with the \verb|l1| penalty, at the same time, this problem is not a multiclass problem so there is no need to use other values of this parameter.
+
+For the model of \emph{Random Forest}, the maximum depth is set to a number, not infinite by default to save running time however may be the reason why \emph{Random Forest} is a little worse than \emph{Gradient Boosting}. Other parameter is the best after many attempts to the best classification result.
 
 \end{document}
