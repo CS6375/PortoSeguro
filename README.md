@@ -39,4 +39,7 @@ The following libraries are necessary to run scripts or notebooks.
 The data file should be in `./data` with filenames `test.csv` and `train.csv`.
 Directly execute the script as follow:
 
+    python3 train_gb.py
     python3 train_lr.py
+    python3 train_nn.py
+    python3 train_rf.py
