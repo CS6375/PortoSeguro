@@ -1,3 +1,3 @@
 # PortoSeguro
 
-[Status Report](./doc/report.pdf)
+[Report](./doc/report.pdf)
