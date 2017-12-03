@@ -1,0 +1,46 @@
+2017-11-28 09:45:08,037 __main__ 38 [INFO][<module>] start 
+100%|██████████| 59/59 [00:03<00:00, 16.00it/s]
+2017-11-28 09:45:15,844 __main__ 49 [INFO][<module>] data preparation end (595212, 228) 
+  0%|          | 0/12 [00:00<?, ?it/s]2017-11-28 09:45:15,845 __main__ 61 [INFO][<module>] params: {'C': 0.1, 'fit_intercept': True, 'penalty': 'l2', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:45:23,267 __main__ 94 [INFO][<module>] logloss: 0.16779873583673846, gini: -0.005795981912469106 
+2017-11-28 09:45:23,268 __main__ 95 [INFO][<module>] current min score: -0.005795981912469106, params: {'C': 0.1, 'fit_intercept': True, 'penalty': 'l2', 'random_state': 0, 'solver': 'liblinear'} 
+  8%|▊         | 1/12 [00:07<01:21,  7.42s/it]2017-11-28 09:45:23,268 __main__ 61 [INFO][<module>] params: {'C': 0.1, 'fit_intercept': True, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:46:26,652 __main__ 94 [INFO][<module>] logloss: 0.15228580835632352, gini: -0.2663470509872101 
+2017-11-28 09:46:26,652 __main__ 95 [INFO][<module>] current min score: -0.2663470509872101, params: {'C': 0.1, 'fit_intercept': True, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 17%|█▋        | 2/12 [01:10<05:54, 35.40s/it]2017-11-28 09:46:26,652 __main__ 61 [INFO][<module>] params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l2', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:46:33,061 __main__ 94 [INFO][<module>] logloss: 0.16388108632368467, gini: -0.00844219502093635 
+2017-11-28 09:46:33,061 __main__ 95 [INFO][<module>] current min score: -0.2663470509872101, params: {'C': 0.1, 'fit_intercept': True, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 25%|██▌       | 3/12 [01:17<03:51, 25.74s/it]2017-11-28 09:46:33,061 __main__ 61 [INFO][<module>] params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:47:07,882 __main__ 94 [INFO][<module>] logloss: 0.1522779696010182, gini: -0.266435517818566 
+2017-11-28 09:47:07,882 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 33%|███▎      | 4/12 [01:52<03:44, 28.01s/it]2017-11-28 09:47:07,882 __main__ 61 [INFO][<module>] params: {'C': 1, 'fit_intercept': True, 'penalty': 'l2', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:47:15,178 __main__ 94 [INFO][<module>] logloss: 0.1677985676953087, gini: -0.005796106485340902 
+2017-11-28 09:47:15,178 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 42%|████▏     | 5/12 [01:59<02:47, 23.87s/it]2017-11-28 09:47:15,178 __main__ 61 [INFO][<module>] params: {'C': 1, 'fit_intercept': True, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:47:33,191 __main__ 94 [INFO][<module>] logloss: 0.1522995382391691, gini: -0.2646276359338373 
+2017-11-28 09:47:33,191 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 50%|█████     | 6/12 [02:17<02:17, 22.89s/it]2017-11-28 09:47:33,192 __main__ 61 [INFO][<module>] params: {'C': 1, 'fit_intercept': False, 'penalty': 'l2', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:47:39,680 __main__ 94 [INFO][<module>] logloss: 0.1638809830719481, gini: -0.008442351741646092 
+2017-11-28 09:47:39,680 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 58%|█████▊    | 7/12 [02:23<01:42, 20.55s/it]2017-11-28 09:47:39,680 __main__ 61 [INFO][<module>] params: {'C': 1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:48:06,186 __main__ 94 [INFO][<module>] logloss: 0.15227962749212914, gini: -0.26529676906835364 
+2017-11-28 09:48:06,187 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 67%|██████▋   | 8/12 [02:50<01:25, 21.29s/it]2017-11-28 09:48:06,187 __main__ 61 [INFO][<module>] params: {'C': 10, 'fit_intercept': True, 'penalty': 'l2', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:48:13,255 __main__ 94 [INFO][<module>] logloss: 0.16779859845966344, gini: -0.005796098448381359 
+2017-11-28 09:48:13,255 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 75%|███████▌  | 9/12 [02:57<00:59, 19.71s/it]2017-11-28 09:48:13,255 __main__ 61 [INFO][<module>] params: {'C': 10, 'fit_intercept': True, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:48:18,443 __main__ 94 [INFO][<module>] logloss: 0.15258059457619483, gini: -0.2550077490755811 
+2017-11-28 09:48:18,444 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 83%|████████▎ | 10/12 [03:02<00:36, 18.26s/it]2017-11-28 09:48:18,444 __main__ 61 [INFO][<module>] params: {'C': 10, 'fit_intercept': False, 'penalty': 'l2', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:48:25,264 __main__ 94 [INFO][<module>] logloss: 0.16388108033475018, gini: -0.008442247261173152 
+2017-11-28 09:48:25,264 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+ 92%|█████████▏| 11/12 [03:09<00:17, 17.22s/it]2017-11-28 09:48:25,264 __main__ 61 [INFO][<module>] params: {'C': 10, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:48:38,532 __main__ 94 [INFO][<module>] logloss: 0.15231052867919193, gini: -0.2645076401104842 
+2017-11-28 09:48:38,532 __main__ 95 [INFO][<module>] current min score: -0.266435517818566, params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+100%|██████████| 12/12 [03:22<00:00, 16.89s/it]
+2017-11-28 09:48:38,532 __main__ 97 [INFO][<module>] minimum params: {'C': 0.1, 'fit_intercept': False, 'penalty': 'l1', 'random_state': 0, 'solver': 'liblinear'} 
+2017-11-28 09:48:38,532 __main__ 98 [INFO][<module>] minimum gini: -0.266435517818566 
+2017-11-28 09:48:44,303 __main__ 105 [INFO][<module>] train end 
+100%|██████████| 58/58 [00:05<00:00, 11.51it/s]
+2017-11-28 09:48:56,382 __main__ 116 [INFO][<module>] test data load end (892816, 228) 
+2017-11-28 09:48:59,951 __main__ 126 [INFO][<module>] end 

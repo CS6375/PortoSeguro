@@ -1,0 +1,226 @@
+2017-11-27 15:03:26,898 __main__ 40 [INFO][<module>] start 
+100%|██████████| 59/59 [00:04<00:00, 13.56it/s]
+2017-11-27 15:03:36,016 __main__ 51 [INFO][<module>] data preparation end (595212, 228) 
+  0%|          | 0/72 [00:00<?, ?it/s]2017-11-27 15:03:36,016 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:04:04,775 __main__ 98 [INFO][<module>] logloss: 0.8434728267630519, gini: -0.07543400344644113 
+2017-11-27 15:04:04,776 __main__ 100 [INFO][<module>] current min score: -0.07543400344644113, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 10, 'warm_start': True} 
+  1%|▏         | 1/72 [00:28<34:01, 28.76s/it]2017-11-27 15:04:04,776 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:04:34,586 __main__ 98 [INFO][<module>] logloss: 0.828170359976251, gini: -0.08355034195494393 
+2017-11-27 15:04:34,586 __main__ 100 [INFO][<module>] current min score: -0.08355034195494393, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 10, 'warm_start': False} 
+  3%|▎         | 2/72 [00:58<34:09, 29.28s/it]2017-11-27 15:04:34,586 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:05:27,891 __main__ 98 [INFO][<module>] logloss: 0.5936263969391511, gini: -0.10228722704355864 
+2017-11-27 15:05:27,891 __main__ 100 [INFO][<module>] current min score: -0.10228722704355864, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 20, 'warm_start': True} 
+  4%|▍         | 3/72 [01:51<42:53, 37.29s/it]2017-11-27 15:05:27,891 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:06:19,097 __main__ 98 [INFO][<module>] logloss: 0.5975825165832999, gini: -0.10657960635679764 
+2017-11-27 15:06:19,097 __main__ 100 [INFO][<module>] current min score: -0.10657960635679764, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 20, 'warm_start': False} 
+  6%|▌         | 4/72 [02:43<46:12, 40.77s/it]2017-11-27 15:06:19,098 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:07:59,624 __main__ 98 [INFO][<module>] logloss: 0.36739797787844736, gini: -0.1440886688322951 
+2017-11-27 15:07:59,624 __main__ 100 [INFO][<module>] current min score: -0.1440886688322951, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 40, 'warm_start': True} 
+  7%|▋         | 5/72 [04:23<58:52, 52.72s/it]2017-11-27 15:07:59,624 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:09:36,310 __main__ 98 [INFO][<module>] logloss: 0.35670559417254744, gini: -0.1551251180187312 
+2017-11-27 15:09:36,310 __main__ 100 [INFO][<module>] current min score: -0.1551251180187312, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 40, 'warm_start': False} 
+  8%|▊         | 6/72 [06:00<1:06:03, 60.05s/it]2017-11-27 15:09:36,310 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:09:47,793 __main__ 98 [INFO][<module>] logloss: 0.1533302550107909, gini: -0.24762702944880188 
+2017-11-27 15:09:47,793 __main__ 100 [INFO][<module>] current min score: -0.24762702944880188, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 10, 'warm_start': True} 
+ 10%|▉         | 7/72 [06:11<57:32, 53.11s/it]  2017-11-27 15:09:47,794 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:09:58,973 __main__ 98 [INFO][<module>] logloss: 0.15350912602368014, gini: -0.24462638843698858 
+2017-11-27 15:09:58,973 __main__ 100 [INFO][<module>] current min score: -0.24762702944880188, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 10, 'warm_start': True} 
+ 11%|█         | 8/72 [06:22<51:03, 47.87s/it]2017-11-27 15:09:58,973 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:10:20,226 __main__ 98 [INFO][<module>] logloss: 0.15309106028179784, gini: -0.25607153509558556 
+2017-11-27 15:10:20,227 __main__ 100 [INFO][<module>] current min score: -0.25607153509558556, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 20, 'warm_start': True} 
+ 12%|█▎        | 9/72 [06:44<47:09, 44.91s/it]2017-11-27 15:10:20,227 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:10:41,624 __main__ 98 [INFO][<module>] logloss: 0.1531315168395683, gini: -0.2553564124697476 
+2017-11-27 15:10:41,624 __main__ 100 [INFO][<module>] current min score: -0.25607153509558556, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 20, 'warm_start': True} 
+ 14%|█▍        | 10/72 [07:05<43:58, 42.56s/it]2017-11-27 15:10:41,624 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:11:22,619 __main__ 98 [INFO][<module>] logloss: 0.15286475976309916, gini: -0.25948775321686535 
+2017-11-27 15:11:22,619 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 15%|█▌        | 11/72 [07:46<43:07, 42.42s/it]2017-11-27 15:11:22,619 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:12:04,466 __main__ 98 [INFO][<module>] logloss: 0.15289907101949035, gini: -0.2584093600230257 
+2017-11-27 15:12:04,466 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 17%|█▋        | 12/72 [08:28<42:22, 42.37s/it]2017-11-27 15:12:04,466 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:12:29,754 __main__ 98 [INFO][<module>] logloss: 0.8489468341760747, gini: -0.06465805019955617 
+2017-11-27 15:12:29,754 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 18%|█▊        | 13/72 [08:53<40:22, 41.06s/it]2017-11-27 15:12:29,755 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:12:55,577 __main__ 98 [INFO][<module>] logloss: 0.8196583357785169, gini: -0.08206691011474154 
+2017-11-27 15:12:55,578 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 19%|█▉        | 14/72 [09:19<38:38, 39.97s/it]2017-11-27 15:12:55,578 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:13:46,601 __main__ 98 [INFO][<module>] logloss: 0.5798726911185577, gini: -0.09967662168401858 
+2017-11-27 15:13:46,601 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 21%|██        | 15/72 [10:10<38:40, 40.71s/it]2017-11-27 15:13:46,601 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:14:36,851 __main__ 98 [INFO][<module>] logloss: 0.5906139427621797, gini: -0.08948595197350917 
+2017-11-27 15:14:36,851 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 22%|██▏       | 16/72 [11:00<38:32, 41.30s/it]2017-11-27 15:14:36,851 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:16:14,805 __main__ 98 [INFO][<module>] logloss: 0.34086603189643505, gini: -0.14039333112713437 
+2017-11-27 15:16:14,805 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 24%|██▎       | 17/72 [12:38<40:54, 44.63s/it]2017-11-27 15:16:14,806 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:17:54,641 __main__ 98 [INFO][<module>] logloss: 0.35641805165049606, gini: -0.13209084860036824 
+2017-11-27 15:17:54,641 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 25%|██▌       | 18/72 [14:18<42:55, 47.70s/it]2017-11-27 15:17:54,641 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:18:20,020 __main__ 98 [INFO][<module>] logloss: 0.836581532603609, gini: -0.08020865055882087 
+2017-11-27 15:18:20,020 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 26%|██▋       | 19/72 [14:44<41:05, 46.53s/it]2017-11-27 15:18:20,020 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:18:46,215 __main__ 98 [INFO][<module>] logloss: 0.8387997287748843, gini: -0.08332325565590581 
+2017-11-27 15:18:46,216 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 28%|██▊       | 20/72 [15:10<39:26, 45.51s/it]2017-11-27 15:18:46,216 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:19:37,969 __main__ 98 [INFO][<module>] logloss: 0.6341360431482814, gini: -0.07802792809660275 
+2017-11-27 15:19:37,969 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 29%|██▉       | 21/72 [16:01<38:56, 45.81s/it]2017-11-27 15:19:37,970 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:20:24,526 __main__ 98 [INFO][<module>] logloss: 0.5980006703634497, gini: -0.11162925411133062 
+2017-11-27 15:20:24,527 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 31%|███       | 22/72 [16:48<38:12, 45.84s/it]2017-11-27 15:20:24,527 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:21:58,683 __main__ 98 [INFO][<module>] logloss: 0.3644612485427262, gini: -0.1457742081015061 
+2017-11-27 15:21:58,684 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 32%|███▏      | 23/72 [18:22<39:09, 47.94s/it]2017-11-27 15:21:58,684 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:23:33,259 __main__ 98 [INFO][<module>] logloss: 0.3691526271913256, gini: -0.1382323233264937 
+2017-11-27 15:23:33,259 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 33%|███▎      | 24/72 [19:57<39:54, 49.89s/it]2017-11-27 15:23:33,259 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:23:44,088 __main__ 98 [INFO][<module>] logloss: 0.15342443431196934, gini: -0.23848658137995304 
+2017-11-27 15:23:44,089 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 35%|███▍      | 25/72 [20:08<37:51, 48.32s/it]2017-11-27 15:23:44,089 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:23:55,173 __main__ 98 [INFO][<module>] logloss: 0.15349701364565224, gini: -0.23805992934033804 
+2017-11-27 15:23:55,173 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 36%|███▌      | 26/72 [20:19<35:56, 46.89s/it]2017-11-27 15:23:55,174 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:24:16,445 __main__ 98 [INFO][<module>] logloss: 0.15294869614269796, gini: -0.2542358814974117 
+2017-11-27 15:24:16,445 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 38%|███▊      | 27/72 [20:40<34:27, 45.94s/it]2017-11-27 15:24:16,445 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:24:37,717 __main__ 98 [INFO][<module>] logloss: 0.15304085655482738, gini: -0.24925614524406026 
+2017-11-27 15:24:37,718 __main__ 100 [INFO][<module>] current min score: -0.25948775321686535, params: {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 39%|███▉      | 28/72 [21:01<33:02, 45.06s/it]2017-11-27 15:24:37,718 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:25:18,142 __main__ 98 [INFO][<module>] logloss: 0.15279945217615537, gini: -0.26131624789339236 
+2017-11-27 15:25:18,142 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 40%|████      | 29/72 [21:42<32:10, 44.90s/it]2017-11-27 15:25:18,142 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:26:01,469 __main__ 98 [INFO][<module>] logloss: 0.1528432995870571, gini: -0.25920538469211896 
+2017-11-27 15:26:01,469 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 42%|████▏     | 30/72 [22:25<31:23, 44.85s/it]2017-11-27 15:26:01,469 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:26:26,391 __main__ 98 [INFO][<module>] logloss: 0.8349445226141766, gini: -0.0675077209462227 
+2017-11-27 15:26:26,392 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 43%|████▎     | 31/72 [22:50<30:12, 44.21s/it]2017-11-27 15:26:26,392 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:26:50,765 __main__ 98 [INFO][<module>] logloss: 0.8461639525536453, gini: -0.07166703634001248 
+2017-11-27 15:26:50,765 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 44%|████▍     | 32/72 [23:14<29:03, 43.59s/it]2017-11-27 15:26:50,765 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:27:36,823 __main__ 98 [INFO][<module>] logloss: 0.6000900901798335, gini: -0.10312525085359736 
+2017-11-27 15:27:36,823 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 46%|████▌     | 33/72 [24:00<28:22, 43.66s/it]2017-11-27 15:27:36,823 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:28:24,062 __main__ 98 [INFO][<module>] logloss: 0.5842523898168616, gini: -0.10541735552785747 
+2017-11-27 15:28:24,062 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 47%|████▋     | 34/72 [24:48<27:43, 43.77s/it]2017-11-27 15:28:24,062 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:29:58,037 __main__ 98 [INFO][<module>] logloss: 0.35685603041138964, gini: -0.138583216976913 
+2017-11-27 15:29:58,037 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 49%|████▊     | 35/72 [26:22<27:52, 45.20s/it]2017-11-27 15:29:58,037 __main__ 65 [INFO][<module>] params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:31:31,934 __main__ 98 [INFO][<module>] logloss: 0.3622082769174146, gini: -0.14495211555437448 
+2017-11-27 15:31:31,934 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 50%|█████     | 36/72 [27:55<27:55, 46.55s/it]2017-11-27 15:31:31,934 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:32:06,125 __main__ 98 [INFO][<module>] logloss: 0.8237122250176018, gini: -0.09105129650462018 
+2017-11-27 15:32:06,125 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 51%|█████▏    | 37/72 [28:30<26:57, 46.22s/it]2017-11-27 15:32:06,125 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:32:40,725 __main__ 98 [INFO][<module>] logloss: 0.8350407443315426, gini: -0.08063479024226972 
+2017-11-27 15:32:40,725 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 53%|█████▎    | 38/72 [29:04<26:01, 45.91s/it]2017-11-27 15:32:40,725 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:33:53,613 __main__ 98 [INFO][<module>] logloss: 0.5881409637807913, gini: -0.12765269290703918 
+2017-11-27 15:33:53,613 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 54%|█████▍    | 39/72 [30:17<25:37, 46.61s/it]2017-11-27 15:33:53,613 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:35:07,898 __main__ 98 [INFO][<module>] logloss: 0.6124854901320921, gini: -0.1012638367910852 
+2017-11-27 15:35:07,898 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 56%|█████▌    | 40/72 [31:31<25:13, 47.30s/it]2017-11-27 15:35:07,899 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:37:21,455 __main__ 98 [INFO][<module>] logloss: 0.36615104943328786, gini: -0.1601229314031687 
+2017-11-27 15:37:21,455 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 57%|█████▋    | 41/72 [33:45<25:31, 49.40s/it]2017-11-27 15:37:21,455 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': None, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:39:53,475 __main__ 98 [INFO][<module>] logloss: 0.37304499316518247, gini: -0.14474768946255923 
+2017-11-27 15:39:53,475 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 58%|█████▊    | 42/72 [36:17<25:55, 51.84s/it]2017-11-27 15:39:53,475 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:40:05,506 __main__ 98 [INFO][<module>] logloss: 0.15306559692841146, gini: -0.2536878934714526 
+2017-11-27 15:40:05,507 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 60%|█████▉    | 43/72 [36:29<24:36, 50.92s/it]2017-11-27 15:40:05,507 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:40:17,692 __main__ 98 [INFO][<module>] logloss: 0.15301575174129495, gini: -0.2547180568715184 
+2017-11-27 15:40:17,692 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 61%|██████    | 44/72 [36:41<23:21, 50.04s/it]2017-11-27 15:40:17,692 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:40:40,053 __main__ 98 [INFO][<module>] logloss: 0.15299194801884194, gini: -0.2578963629093549 
+2017-11-27 15:40:40,054 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 62%|██████▎   | 45/72 [37:04<22:14, 49.42s/it]2017-11-27 15:40:40,054 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:41:02,808 __main__ 98 [INFO][<module>] logloss: 0.15277634689341232, gini: -0.2591595097274695 
+2017-11-27 15:41:02,808 __main__ 100 [INFO][<module>] current min score: -0.26131624789339236, params: {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 64%|██████▍   | 46/72 [37:26<21:09, 48.84s/it]2017-11-27 15:41:02,809 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:41:45,481 __main__ 98 [INFO][<module>] logloss: 0.15278956056988655, gini: -0.26208547934885584 
+2017-11-27 15:41:45,481 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 65%|██████▌   | 47/72 [38:09<20:17, 48.71s/it]2017-11-27 15:41:45,481 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:42:32,327 __main__ 98 [INFO][<module>] logloss: 0.15286015190315272, gini: -0.2593766442614456 
+2017-11-27 15:42:32,327 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 67%|██████▋   | 48/72 [38:56<19:28, 48.67s/it]2017-11-27 15:42:32,327 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:43:06,773 __main__ 98 [INFO][<module>] logloss: 0.8042245644068592, gini: -0.07854861055276552 
+2017-11-27 15:43:06,773 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 68%|██████▊   | 49/72 [39:30<18:32, 48.38s/it]2017-11-27 15:43:06,773 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:43:38,323 __main__ 98 [INFO][<module>] logloss: 0.8464680181562582, gini: -0.06125046779122578 
+2017-11-27 15:43:38,323 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 69%|██████▉   | 50/72 [40:02<17:37, 48.05s/it]2017-11-27 15:43:38,323 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:44:46,664 __main__ 98 [INFO][<module>] logloss: 0.544131172866697, gini: -0.1228360747830719 
+2017-11-27 15:44:46,664 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 71%|███████   | 51/72 [41:10<16:57, 48.44s/it]2017-11-27 15:44:46,664 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:45:50,884 __main__ 98 [INFO][<module>] logloss: 0.556266394372734, gini: -0.12008103119719404 
+2017-11-27 15:45:50,884 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 72%|███████▏  | 52/72 [42:14<16:14, 48.75s/it]2017-11-27 15:45:50,885 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:47:58,961 __main__ 98 [INFO][<module>] logloss: 0.34319266989944747, gini: -0.1457818170928833 
+2017-11-27 15:47:58,961 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 74%|███████▎  | 53/72 [44:22<15:54, 50.24s/it]2017-11-27 15:47:58,961 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 50, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:50:05,784 __main__ 98 [INFO][<module>] logloss: 0.3385985451771796, gini: -0.16077188574169776 
+2017-11-27 15:50:05,784 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 75%|███████▌  | 54/72 [46:29<15:29, 51.66s/it]2017-11-27 15:50:05,784 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:50:37,887 __main__ 98 [INFO][<module>] logloss: 0.8594990933532041, gini: -0.06389640764307147 
+2017-11-27 15:50:37,887 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 76%|███████▋  | 55/72 [47:01<14:32, 51.31s/it]2017-11-27 15:50:37,887 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:51:10,399 __main__ 98 [INFO][<module>] logloss: 0.8557844961399941, gini: -0.06728037746448123 
+2017-11-27 15:51:10,400 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 78%|███████▊  | 56/72 [47:34<13:35, 50.97s/it]2017-11-27 15:51:10,400 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:52:32,186 __main__ 98 [INFO][<module>] logloss: 0.600341035336443, gini: -0.1187519491635951 
+2017-11-27 15:52:32,186 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 79%|███████▉  | 57/72 [48:56<12:52, 51.51s/it]2017-11-27 15:52:32,187 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:53:53,805 __main__ 98 [INFO][<module>] logloss: 0.6090436604095592, gini: -0.106642226326501 
+2017-11-27 15:53:53,805 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 81%|████████  | 58/72 [50:17<12:08, 52.03s/it]2017-11-27 15:53:53,805 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 15:56:18,333 __main__ 98 [INFO][<module>] logloss: 0.36636385465097715, gini: -0.13761212723818472 
+2017-11-27 15:56:18,333 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 82%|████████▏ | 59/72 [52:42<11:36, 53.60s/it]2017-11-27 15:56:18,333 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 15:58:28,294 __main__ 98 [INFO][<module>] logloss: 0.37093409289154455, gini: -0.15022059966905088 
+2017-11-27 15:58:28,294 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 83%|████████▎ | 60/72 [54:52<10:58, 54.87s/it]2017-11-27 15:58:28,295 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 15:58:43,402 __main__ 98 [INFO][<module>] logloss: 0.15299610090823432, gini: -0.25094395897280086 
+2017-11-27 15:58:43,402 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 85%|████████▍ | 61/72 [55:07<09:56, 54.22s/it]2017-11-27 15:58:43,402 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 15:58:57,933 __main__ 98 [INFO][<module>] logloss: 0.15317284355950223, gini: -0.24756110227027706 
+2017-11-27 15:58:57,933 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 86%|████████▌ | 62/72 [55:21<08:55, 53.58s/it]2017-11-27 15:58:57,933 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 15:59:24,681 __main__ 98 [INFO][<module>] logloss: 0.15289992159057214, gini: -0.2593587821190255 
+2017-11-27 15:59:24,681 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 88%|████████▊ | 63/72 [55:48<07:58, 53.15s/it]2017-11-27 15:59:24,682 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 15:59:51,530 __main__ 98 [INFO][<module>] logloss: 0.15288217324932182, gini: -0.2589715192177684 
+2017-11-27 15:59:51,531 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 89%|████████▉ | 64/72 [56:15<07:01, 52.74s/it]2017-11-27 15:59:51,531 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 16:00:47,525 __main__ 98 [INFO][<module>] logloss: 0.1527706860555614, gini: -0.2609008435785547 
+2017-11-27 16:00:47,526 __main__ 100 [INFO][<module>] current min score: -0.26208547934885584, params: {'bootstrap': False, 'criterion': 'gini', 'max_depth': 10, 'n_estimators': 40, 'warm_start': True} 
+ 90%|█████████ | 65/72 [57:11<06:09, 52.79s/it]2017-11-27 16:00:47,526 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 16:01:48,534 __main__ 98 [INFO][<module>] logloss: 0.15281832112494317, gini: -0.2628036339176536 
+2017-11-27 16:01:48,534 __main__ 100 [INFO][<module>] current min score: -0.2628036339176536, params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+ 92%|█████████▏| 66/72 [58:12<05:17, 52.92s/it]2017-11-27 16:01:48,534 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 10, 'warm_start': True} 
+2017-11-27 16:02:30,969 __main__ 98 [INFO][<module>] logloss: 0.8273655065453752, gini: -0.08226907380246651 
+2017-11-27 16:02:30,969 __main__ 100 [INFO][<module>] current min score: -0.2628036339176536, params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+ 93%|█████████▎| 67/72 [58:54<04:23, 52.76s/it]2017-11-27 16:02:30,969 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 10, 'warm_start': False} 
+2017-11-27 16:03:19,139 __main__ 98 [INFO][<module>] logloss: 0.8268945687253912, gini: -0.06557405461808363 
+2017-11-27 16:03:19,139 __main__ 100 [INFO][<module>] current min score: -0.2628036339176536, params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+ 94%|█████████▍| 68/72 [59:43<03:30, 52.69s/it]2017-11-27 16:03:19,139 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 20, 'warm_start': True} 
+2017-11-27 16:04:36,231 __main__ 98 [INFO][<module>] logloss: 0.5891107536035542, gini: -0.10389154480037499 
+2017-11-27 16:04:36,232 __main__ 100 [INFO][<module>] current min score: -0.2628036339176536, params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+ 96%|█████████▌| 69/72 [1:01:00<02:39, 53.05s/it]2017-11-27 16:04:36,232 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 20, 'warm_start': False} 
+2017-11-27 16:05:46,853 __main__ 98 [INFO][<module>] logloss: 0.5756884163477273, gini: -0.10752184140179222 
+2017-11-27 16:05:46,853 __main__ 100 [INFO][<module>] current min score: -0.2628036339176536, params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+ 97%|█████████▋| 70/72 [1:02:10<01:46, 53.30s/it]2017-11-27 16:05:46,853 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 40, 'warm_start': True} 
+2017-11-27 16:08:14,381 __main__ 98 [INFO][<module>] logloss: 0.35117997585384697, gini: -0.13948038477168523 
+2017-11-27 16:08:14,381 __main__ 100 [INFO][<module>] current min score: -0.2628036339176536, params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+ 99%|█████████▊| 71/72 [1:04:38<00:54, 54.62s/it]2017-11-27 16:08:14,381 __main__ 65 [INFO][<module>] params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 50, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 16:10:42,666 __main__ 98 [INFO][<module>] logloss: 0.35663424136202526, gini: -0.13896293518246838 
+2017-11-27 16:10:42,666 __main__ 100 [INFO][<module>] current min score: -0.2628036339176536, params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+100%|██████████| 72/72 [1:07:06<00:00, 55.93s/it]
+2017-11-27 16:10:42,666 __main__ 102 [INFO][<module>] minimum params: {'bootstrap': False, 'criterion': 'entropy', 'max_depth': 10, 'n_estimators': 40, 'warm_start': False} 
+2017-11-27 16:10:42,667 __main__ 103 [INFO][<module>] minimum gini: -0.2628036339176536 
+2017-11-27 16:11:48,637 __main__ 110 [INFO][<module>] train end 
+100%|██████████| 58/58 [00:06<00:00,  9.09it/s]
+2017-11-27 16:12:02,101 __main__ 121 [INFO][<module>] test data load end (892816, 228) 
+2017-11-27 16:12:11,921 __main__ 131 [INFO][<module>] end 

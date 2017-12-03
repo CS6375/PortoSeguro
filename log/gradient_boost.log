@@ -1,0 +1,65 @@
+/Users/hanlin/anaconda3/envs/Driver/bin/python /Users/hanlin/Github/PortoSeguro/train_gb.py
+2017-11-27 16:20:49,545 __main__ 40 [INFO][<module>] start 
+100%|██████████| 59/59 [00:04<00:00, 13.00it/s]
+2017-11-27 16:20:58,435 __main__ 51 [INFO][<module>] data preparation end (595212, 228) 
+  0%|          | 0/18 [00:00<?, ?it/s]2017-11-27 16:20:58,437 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 2, 'n_estimators': 50} 
+2017-11-27 16:23:06,436 __main__ 96 [INFO][<module>] logloss: 0.15272816665185182, gini: -0.2586646279204421 
+2017-11-27 16:23:06,436 __main__ 98 [INFO][<module>] current min score: -0.2586646279204421, params: {'loss': 'deviance', 'max_depth': 2, 'n_estimators': 50} 
+  6%|▌         | 1/18 [02:07<36:15, 128.00s/it]2017-11-27 16:23:06,436 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 2, 'n_estimators': 100} 
+2017-11-27 16:26:53,186 __main__ 96 [INFO][<module>] logloss: 0.1522419536864126, gini: -0.2699683200739038 
+2017-11-27 16:26:53,186 __main__ 98 [INFO][<module>] current min score: -0.2699683200739038, params: {'loss': 'deviance', 'max_depth': 2, 'n_estimators': 100} 
+ 11%|█         | 2/18 [05:54<47:17, 177.37s/it]2017-11-27 16:26:53,186 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 2, 'n_estimators': 200} 
+2017-11-27 16:34:34,162 __main__ 96 [INFO][<module>] logloss: 0.15198845795739102, gini: -0.2764991995509847 
+2017-11-27 16:34:34,162 __main__ 98 [INFO][<module>] current min score: -0.2764991995509847, params: {'loss': 'deviance', 'max_depth': 2, 'n_estimators': 200} 
+ 17%|█▋        | 3/18 [13:35<1:07:58, 271.91s/it]2017-11-27 16:34:34,162 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 3, 'n_estimators': 50} 
+2017-11-27 16:38:25,590 __main__ 96 [INFO][<module>] logloss: 0.15236534803777657, gini: -0.2685228327285951 
+2017-11-27 16:38:25,590 __main__ 98 [INFO][<module>] current min score: -0.2764991995509847, params: {'loss': 'deviance', 'max_depth': 2, 'n_estimators': 200} 
+ 22%|██▏       | 4/18 [17:27<1:01:05, 261.79s/it]2017-11-27 16:38:25,590 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 3, 'n_estimators': 100} 
+2017-11-27 16:55:08,207 __main__ 96 [INFO][<module>] logloss: 0.1520094999120162, gini: -0.27830449956248393 
+2017-11-27 16:55:08,207 __main__ 98 [INFO][<module>] current min score: -0.27830449956248393, params: {'loss': 'deviance', 'max_depth': 3, 'n_estimators': 100} 
+ 28%|██▊       | 5/18 [34:09<1:28:49, 409.95s/it]2017-11-27 16:55:08,207 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 3, 'n_estimators': 200} 
+2017-11-27 19:00:20,235 __main__ 96 [INFO][<module>] logloss: 0.151849313405045, gini: -0.282298040611785 
+2017-11-27 19:00:20,236 __main__ 98 [INFO][<module>] current min score: -0.282298040611785, params: {'loss': 'deviance', 'max_depth': 3, 'n_estimators': 200} 
+ 33%|███▎      | 6/18 [2:39:21<5:18:43, 1593.63s/it]2017-11-27 19:00:20,236 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 50} 
+2017-11-27 19:07:05,723 __main__ 96 [INFO][<module>] logloss: 0.15222886757702034, gini: -0.2746543034494211 
+2017-11-27 19:07:05,723 __main__ 98 [INFO][<module>] current min score: -0.282298040611785, params: {'loss': 'deviance', 'max_depth': 3, 'n_estimators': 200} 
+ 39%|███▉      | 7/18 [2:46:07<4:21:02, 1423.90s/it]2017-11-27 19:07:05,723 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 100} 
+2017-11-27 19:19:05,047 __main__ 96 [INFO][<module>] logloss: 0.15206163159505356, gini: -0.2810316770006429 
+2017-11-27 19:19:05,047 __main__ 98 [INFO][<module>] current min score: -0.282298040611785, params: {'loss': 'deviance', 'max_depth': 3, 'n_estimators': 200} 
+ 44%|████▍     | 8/18 [2:58:06<3:42:38, 1335.83s/it]2017-11-27 19:19:05,047 __main__ 63 [INFO][<module>] params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+2017-11-27 19:40:00,391 __main__ 96 [INFO][<module>] logloss: 0.15220422920614723, gini: -0.28345703446290016 
+2017-11-27 19:40:00,391 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 50%|█████     | 9/18 [3:19:01<3:19:01, 1326.88s/it]2017-11-27 19:40:00,391 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 2, 'n_estimators': 50} 
+2017-11-27 19:42:09,307 __main__ 96 [INFO][<module>] logloss: 0.15278432497081035, gini: -0.25801659783225217 
+2017-11-27 19:42:09,307 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 56%|█████▌    | 10/18 [3:21:10<2:40:56, 1207.09s/it]2017-11-27 19:42:09,307 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 2, 'n_estimators': 100} 
+2017-11-27 19:46:19,684 __main__ 96 [INFO][<module>] logloss: 0.1522597922029383, gini: -0.27031163286230453 
+2017-11-27 19:46:19,684 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 61%|██████    | 11/18 [3:25:21<2:10:40, 1120.11s/it]2017-11-27 19:46:19,684 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 2, 'n_estimators': 200} 
+2017-11-27 19:53:38,585 __main__ 96 [INFO][<module>] logloss: 0.15197255539475896, gini: -0.2776987760289389 
+2017-11-27 19:53:38,586 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 67%|██████▋   | 12/18 [3:32:40<1:46:20, 1063.35s/it]2017-11-27 19:53:38,586 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 3, 'n_estimators': 50} 
+2017-11-27 19:57:40,776 __main__ 96 [INFO][<module>] logloss: 0.15231193535811408, gini: -0.2712999357589756 
+2017-11-27 19:57:40,776 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 72%|███████▏  | 13/18 [3:36:42<1:23:20, 1000.18s/it]2017-11-27 19:57:40,776 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 3, 'n_estimators': 100} 
+2017-11-27 20:05:09,010 __main__ 96 [INFO][<module>] logloss: 0.15197284708130135, gini: -0.27871561816868473 
+2017-11-27 20:05:09,011 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 78%|███████▊  | 14/18 [3:44:10<1:04:03, 960.76s/it] 2017-11-27 20:05:09,011 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 3, 'n_estimators': 200} 
+ 2017-11-27 20:17:53,087 __main__ 96 [INFO][<module>] logloss: 0.1517861039062998, gini: -0.28344444858437146 
+2017-11-27 20:17:53,088 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 83%|████████▎ | 15/18 [3:56:54<47:22, 947.64s/it]  2017-11-27 20:17:53,088 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 4, 'n_estimators': 50} 
+2017-11-27 20:24:09,909 __main__ 96 [INFO][<module>] logloss: 0.15213299195003926, gini: -0.2739147484667974 
+2017-11-27 20:24:09,909 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 89%|████████▉ | 16/18 [4:03:11<30:23, 911.97s/it]2017-11-27 20:24:09,909 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 4, 'n_estimators': 100} 
+2017-11-27 20:35:11,408 __main__ 96 [INFO][<module>] logloss: 0.15186763387100563, gini: -0.2812040838459333 
+2017-11-27 20:35:11,408 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+ 94%|█████████▍| 17/18 [4:14:12<14:57, 897.23s/it]2017-11-27 20:35:11,408 __main__ 63 [INFO][<module>] params: {'loss': 'exponential', 'max_depth': 4, 'n_estimators': 200} 
+2017-11-27 20:55:04,327 __main__ 96 [INFO][<module>] logloss: 0.15180442780443246, gini: -0.28255016003032973 
+2017-11-27 20:55:04,327 __main__ 98 [INFO][<module>] current min score: -0.28345703446290016, params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+100%|██████████| 18/18 [4:34:05<00:00, 913.66s/it]
+2017-11-27 20:55:04,327 __main__ 100 [INFO][<module>] minimum params: {'loss': 'deviance', 'max_depth': 4, 'n_estimators': 200} 
+2017-11-27 20:55:04,327 __main__ 101 [INFO][<module>] minimum gini: -0.28345703446290016 
+2017-11-27 21:21:44,467 __main__ 108 [INFO][<module>] train end 
+100%|██████████| 58/58 [00:06<00:00,  9.46it/s]
+2017-11-27 21:21:57,091 __main__ 119 [INFO][<module>] test data load end (892816, 228) 
+2017-11-27 21:22:09,397 __main__ 129 [INFO][<module>] end 
