@@ -43,3 +43,5 @@ Directly execute the script as follow:
     python3 train_lr.py
     python3 train_nn.py
     python3 train_rf.py
+
+## [Report](./doc/report.pdf)
