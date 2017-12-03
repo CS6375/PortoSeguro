@@ -20,7 +20,7 @@ classical grid search and probabilistic roadmaps.
 in the case of several learning algorithms on several data sets.
 \end{itemize}
 
-Scikit-learn provides both Exhaustive Grid Search\cite{scikit:grid} and Randomized Parameter Optimization\cite{scikit:random} class. To gain more insight about the hyperparameter tuning process (though might be useless), we used \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterGrid.html#sklearn.model_selection.ParameterGrid}{\verb|ParameterGrid} in our implementations. Test results of all parameter sets are included in log files. \verb||
+Scikit-learn provides both Exhaustive Grid Search\cite{Scikit:grid} and Randomized Parameter Optimization\cite{Scikit:random} class. To gain more insight about the hyperparameter tuning process (though might be useless), we used \href{http://Scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterGrid.html#sklearn.model_selection.ParameterGrid}{\verb|ParameterGrid} in our implementations. Test results of all parameter sets are included in log files. \verb||
 
 \subsection{Evaluation Metrics}
 
@@ -38,7 +38,7 @@ We used per-class accuracy, AUC and Normalized Gini Coefficient to evaluate out 
 
 \subsubsection{Per-Class Accuracy}
 
-Accuracy simply measures how often the classifier makes the correct prediction. It’s the ratio between the number of correct predictions and the total number of predictions (the number of data points in the test set)\cite{Alice:2015:Evaluating}:
+Accuracy simply measures how often the classifier makes the correct prediction. It's the ratio between the number of correct predictions and the total number of predictions (the number of data points in the test set)\cite{Alice:2015:Evaluating}:
 \begin{IEEEeqnarray}{C} 
 accuracy = \frac{\mathrm{\#\ correct\ predictions}}{\mathrm{\#\ total\ data\ points}}\IEEEnonumber
 \end{IEEEeqnarray}
@@ -74,11 +74,11 @@ We use $k$-fold cross-validation as our validation technique.
 
 In $k$-fold cross-validation, we first divide the training dataset into $k$ folds. For a given hyperparameter setting, each of the $k$ folds takes turns being the hold-out validation set; a model is trained on the rest of the $k - 1$ folds and measured on the held-out fold. The overall performance is taken to be the average of the performance on all $k$ folds. Repeat this procedure for all of the hyperparameter settings that need to be evaluated, then pick the hyperparameters that resulted in the highest $k$-fold average.
 
-Scikit learn provides multiple variations of $k$-fold\cite{scikit-learn}, for example, 
+Scikit-learn provides multiple variations of $k$-fold\cite{Scikit-learn}, for example, 
 \begin{itemize}
-    \item \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold}{\verb|KFold}, which divides all the samples in k groups of samples, called folds of equal sizes (if possible). The prediction function is learned using $k - 1$ folds, and the fold left out is used for test.
-    \item \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html#sklearn.model_selection.LeaveOneOut}{\verb|LeaveOneOut}, which is basically special simple case when $k = n$ in \verb|KFold|.
-    \item \href{http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold}{\verb|StratifiedKFold}, which returns \emph{stratified} folds, i.e., each set contains approximately the \emph{same} percentage of samples of each target class as the complete set.
+    \item \href{http://Scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold}{\verb|KFold}, which divides all the samples in k groups of samples, called folds of equal sizes (if possible). The prediction function is learned using $k - 1$ folds, and the fold left out is used for test.
+    \item \href{http://Scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html#sklearn.model_selection.LeaveOneOut}{\verb|LeaveOneOut}, which is basically special simple case when $k = n$ in \verb|KFold|.
+    \item \href{http://Scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold}{\verb|StratifiedKFold}, which returns \emph{stratified} folds, i.e., each set contains approximately the \emph{same} percentage of samples of each target class as the complete set.
 \end{itemize}
 
 We chose \verb|StratifiedKFold| in out implementations during training phase.

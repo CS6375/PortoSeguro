@@ -12,7 +12,7 @@ holder made an insurance claim in the past.
 
 \subsection{Data Overview}
 
-In total, there are $595212$ training data instances and $892816$ testing data instance. Since it's a competition, testing data had no \lstinline{target} label. We cannot test our model accuracy based on testing data. In stead, we would use k-fold and cross validation on the training data to evaluate our model, which is discussed in more detail in \cref{evam}.
+In total, there are $595212$ training data instances and $892816$ testing data instances. Since it's a competition, testing data had no \lstinline{target} label. We cannot test our model accuracy based on testing data. Instead, we would use k-fold and cross validation on the training data to evaluate our model, which is discussed in more detail in \cref{evam}.
 
 In the train and test data, features that belong to similar groupings are
 tagged as such in the feature names (e.g., \lstinline{ind}, \lstinline{reg},
@@ -45,7 +45,7 @@ continuous or ordinal. Feature count in each category and type are shown in \cre
 \end{table}
 
 Although feature's categories are provided, the meaning of each feature remains unknown. Some participants have guessed the meaning of several features, for example the \emph{binary} variables  \lstinline{ps_ind_06-10} are \emph{one-hot encoded}, and \lstinline{ps_car_13} might be car's mileage.
-Our experiment show that some of the assumptions are plausible, however, we did not rely on these information to build our model.
+Our experiment shows that some of the assumptions are plausible, however, we did not rely on this information to build our model.
 
 \subsection{Distribution Analysis}
 
@@ -82,7 +82,7 @@ Features' distribution for \lstinline{ind}, \lstinline{reg}, \lstinline{car}, \l
 From histograms, we may conclude the following:
 \begin{itemize}
 \item Some binary features are dominated by \lstinline{True} (\lstinline{False}), for example \lstinline{ps_ind_06-10}.
-\item Some features' distribution are fairly even, for example \lstinline{ps_calc_01}, \lstinline{ps_calc_02} and \lstinline{ps_calc_03}.
+\item Some features' distribution is fairly even, for example \lstinline{ps_calc_01}, \lstinline{ps_calc_02} and \lstinline{ps_calc_03}.
 \end{itemize}
 
 It might seem plausible to discard these features in training phase. But the deletion requires more careful consideration. As mentioned above, \lstinline{ps_ind_06-10} might be \emph{one-hot encoded}, thus, all these four features would be naturally exclusive of each other.
@@ -94,7 +94,7 @@ Features' Correlation within each category, i.e., \lstinline{ind}, \lstinline{re
 
 
 From correlation plot, we can conclude that strong correlation did not exist.
-It it not possible to conduct any dimension reduction based on correlations
+It is not possible to conduct any dimension reduction based on correlations
 between features.
 
 \subsection{Missing Value Mechanism and Data Imputation}
@@ -134,11 +134,11 @@ There are several approaches to handle missing values\cite{Intro:Missing}:
 complete data.
 \item Single imputation methods: imputes (i.e., \emph{fills in}) the missing data with seemingly suitable replacement values. Mean, median and mode are the most popular averaging techniques to use\cite{Missing:Howto}.
 \item Multiple imputation methods: creates several copies of the data set, each containing different
-imputed values. These method has greater performance but is harder to implemented.
+imputed values. These methods have greater performance but are harder to implemented.
 \end{itemize}
 
 From the table we can see that, most features have no missing value (only 13 features out of 51 have).
-Some features only have a small amount of instances with missing value (\lstinline{ps_car_02_cat} and \lstinline{ps_car_11} have 5 missing value and \lstinline{ps_car_12} have only 1).
+Some features only have a small number of instances with missing value (\lstinline{ps_car_02_cat} and \lstinline{ps_car_11} have 5 missing value and \lstinline{ps_car_12} have only 1).
 
 Based on these observation, we handled the missing values as follow:
 

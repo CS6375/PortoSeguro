@@ -26,12 +26,12 @@ The claim prediction problem can be defined as follow:
 
 \subsection{Algorithm Definition}
 
-We used logistic regression, neural network in our model building. In this
+We used logistic regression, ensemble methods like random forests and gradient boost in our model building. In this
 section, we will discuss the theoretical foundation of these algorithms.
 
 \subsubsection{Logistic Regression}
 
-Logistic Regression is an approach to learning functions of the form $f:X\rightarrow Y$\cite{Mitchell:2016} or in our case $P(Y|X)$ where $Y$ is discrete-valued, and $X = \langle X_1 ...X_n\rangle$ is any vector containing discrete and continuous variables. The parametric model assumed by Logistic Regression in the case where Y is boolean is:
+Logistic Regression is an approach to learning functions of the form $f:X\rightarrow Y$\cite{Mitchell:2016} or in our case $P(Y|X)$ where $Y$ is discrete-valued, and $X = \langle X_1 ...X_n\rangle$ is any vector containing discrete and continuous variables. The parametric model assumed by Logistic Regression in the case where Y is Boolean is:
 \begin{IEEEeqnarray}{Rl} 
 P(Y=1|X)&=\frac{1}{1+\exp(w_0+\sum_{i=1}^nw_iX_i)}\IEEEnonumber\\
 P(Y=0|X)&=\frac{\exp(w_0+\sum_{i=1}^nw_iX_i)}{1+\exp(w_0+\sum_{i=1}^nw_iX_i)}\IEEEnonumber
@@ -47,10 +47,70 @@ In general, the algorithm used gradient ascent to repeatedly update the weights 
 \begin{IEEEeqnarray}{C} 
 w_i \leftarrow w_i+\eta\sum_lX_i^l(Y^l-\hat{P}(Y^l=1|X^l,W))-\eta\lambda{w_i}\IEEEnonumber
 \end{IEEEeqnarray}
-where $\eta$ is a small constant which determines the step size. The actual implementation of scikit learn library includes multiple solvers, such as Stochastic Average Gradient (SAG) descent, SAGA and Broyden-Fletcher-Goldfarb-Shanno (LBFGS).
+where $\eta$ is a small constant which determines the step size.
 
-\subsubsection{Neural Network}
+The actual implementation of Scikit-learn library includes multiple solvers, such as Stochastic Average Gradient (\verb|SAG|) descent, \verb|SAGA| and Broyden-Fletcher-Goldfarb-Shanno (\verb|LBFGS|).
 
-Artificial neural networks (ANNs)\cite{ANN:Wikipedia}, a form of connectionism, are computing systems inspired by the biological neural networks that constitute animal brains. Such systems learn (progressively improve performance) to do tasks by considering examples, generally without task-specific programming. For example, in image recognition, they might learn to identify images that contain cats by analyzing example images that have been manually labeled as ``cat'' or ``no cat'' and using the analytic results to identify cats in other images. They have found most use in applications difficult to express in a traditional computer algorithm using rule-based programming.
+\subsubsection{Ensemble Methods}
+
+An ensemble of classifiers is a set of classifiers whose individual decisions are
+combined in some way typically by weighted or unweighted voting to classify
+new examples\cite{dietterich2000ensemble}.
+
+\emph{Random forests}\cite{liaw2002classification} is an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set.
+
+The algorithm for random forests is shown in \cref{algorf}.
+
+\begin{algorithm}[H]
+\caption{Algorithm for Random Forests}\label{algorf}
+\begin{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\INDSTATE}[1][1]{\STATE\hspace{#1\algorithmicindent}}
+\REQUIRE Dataset $D$ containing $N$ instances and $M$ attributes
+\ENSURE  A Classifier
+\INDSTATE[-1] \textbf{Training Phase:}
+\FOR {$b = 1$ to $B$}
+\STATE Create a bootstrap sample of size $N$ from original data
+\STATE Grow tree $T_b$ using the bootstrap sample as follows:
+\INDSTATE Create a random sample of m attributes ($m < M$).
+\INDSTATE Use these attributes to construct a decision tree as usual.
+\ENDFOR
+\INDSTATE[-1] \textbf{Testing Phase:}
+\FOR {Each a new data point $X$}
+\STATE Take the aggregated prediction of models:
+\INDSTATE For classification: $aggregate = majority$
+\INDSTATE For regression: $aggregate = average$
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+\emph{Gradient boosting}\cite{friedman2001greedy} is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiable loss function.
+The algorithm for random forests is shown in \cref{algogb}.
+
+\begin{algorithm}[!ht]
+\caption{Algorithm for Gradient Boosting\cite{GB:Wikipedia}}\label{algogb}
+\begin{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Algorithm:}}
+\newcommand{\INDSTATE}[1][1]{\STATE\hspace{#1\algorithmicindent}}
+\REQUIRE training set $\displaystyle \{(x_{i},y_{i})\}_{i=1}^{n}$, a differentiable loss function {$\displaystyle L(y,F(x))$} number of iterations $M$.
+\ENSURE
+\STATE Initialize model with a constant value:
+\[F_0(x) = \underset{\gamma}{\arg\min} \sum_{i=1}^n L(y_i, \gamma).\]
+\FOR {$m = 1$ to $M$}
+\STATE 1. Compute so-called pseudo-residuals:
+\[r_{im} = -\left[\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}\right]_{F(x)=F_{m-1}(x)} \quad \mbox{for } i=1,\ldots,n.\]
+\STATE 2. Fit a base learner (e.g. tree) {$\displaystyle h_{m}(x)$} to pseudo-residuals, i.e. train it using the training set {$\displaystyle \{(x_{i},r_{im})\}_{i=1}^{n}$}.
+\STATE 3. Compute multiplier {$\displaystyle \gamma _{m}$} by solving the following one-dimensional optimization\cite{LS:Wikipedia} problem:
+\[\gamma_m = \underset{\gamma}{\operatorname{arg\,min}} \sum_{i=1}^n L\left(y_i, F_{m-1}(x_i) + \gamma h_m(x_i)\right)\]
+\STATE 4. Update the model:
+\[F_{m}(x)=F_{{m-1}}(x)+\gamma _{m}h_{m}(x)\]
+\ENDFOR
+\STATE Output $\displaystyle F_{M}(x)$.
+\end{algorithmic}
+\end{algorithm}
+
+The implementation in Scikit-learn library of these two ensemble methods are \verb|RandomForestClassifier| and \verb|GradientBoostingClassifier| respectively.
 
 \end{document}
