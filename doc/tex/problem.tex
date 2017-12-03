@@ -13,51 +13,72 @@
 A machine learning problem is defined as to learn from experience $E$ with
 respect to some class of tasks $T$ and performance measure $P$, if its
 performance at tasks in $T$, as measured by $P$, improves with experience
-$E$\cite{Mitchell:1997:ML:541177}.
-The claim prediction problem can be defined as follow:
+$E$\cite{Mitchell:1997:ML:541177}. The claim prediction problem can be defined
+as follow:
+
 \begin{itemize}[\IEEEsetlabelwidth{Z}] 
     \item[$E$] previous year's policy holders' information and whether or not a
         claim was filed for that policy holder.
-    \item[$T$] predicting the possibility that an auto insurance policy
-        holder will file an insurance claim next year.
+    \item[$T$] predicting the possibility that an auto insurance policy holder
+        will file an insurance claim next year.
     \item[$P$] the accuracies and Gini Coefficient was used to measure the
         effectiveness of models.
 \end{itemize}
 
 \subsection{Algorithm Definition}
 
-We used logistic regression, ensemble methods like random forests and gradient boost in our model building. In this
-section, we will discuss the theoretical foundation of these algorithms.
+We used logistic regression, ensemble methods like random forests and gradient
+boost in our model building. In this section, we will discuss the theoretical
+foundation of these algorithms.
 
 \subsubsection{Logistic Regression}
 
-Logistic Regression is an approach to learning functions of the form $f:X\rightarrow Y$\cite{Mitchell:2016} or in our case $P(Y|X)$ where $Y$ is discrete-valued, and $X = \langle X_1 ...X_n\rangle$ is any vector containing discrete and continuous variables. The parametric model assumed by Logistic Regression in the case where Y is Boolean is:
+Logistic Regression is an approach to learning functions of the form
+$f:X\rightarrow Y$\cite{Mitchell:2016} or in our case $P(Y|X)$ where $Y$ is
+discrete-valued, and $X = \langle X_1 ...X_n\rangle$ is any vector containing
+discrete and continuous variables. The parametric model assumed by Logistic
+Regression in the case where Y is Boolean is:
+
 \begin{IEEEeqnarray}{Rl} 
 P(Y=1|X)&=\frac{1}{1+\exp(w_0+\sum_{i=1}^nw_iX_i)}\IEEEnonumber\\
 P(Y=0|X)&=\frac{\exp(w_0+\sum_{i=1}^nw_iX_i)}{1+\exp(w_0+\sum_{i=1}^nw_iX_i)}\IEEEnonumber
 \end{IEEEeqnarray}
 
-One reasonable approach to training Logistic Regression is to choose parameter values that maximize the conditional data likelihood. We also used regularization to reduce the overfitting problem. The penalized log likelihood function is as followed:
+One reasonable approach to training Logistic Regression is to choose parameter
+values that maximize the conditional data likelihood. We also used
+regularization to reduce the overfitting problem. The penalized log likelihood
+function is as followed:
+
 \begin{IEEEeqnarray}{C} 
 W \leftarrow \arg\max_W\sum_l\ln{P(Y^l|X^l,W)}-\frac{\lambda}{2}||W||^2\IEEEnonumber
 \end{IEEEeqnarray}
 where the last term is a penalty proportional to the squared magnitude of $W$.
 
-In general, the algorithm used gradient ascent to repeatedly update the weights in the direction of the gradient, on each iteration changing every weight $w_i$, beginning with initial weights of zero, according to:
+In general, the algorithm used gradient ascent to repeatedly update the weights
+in the direction of the gradient, on each iteration changing every weight
+$w_i$, beginning with initial weights of zero, according to:
+
 \begin{IEEEeqnarray}{C} 
 w_i \leftarrow w_i+\eta\sum_lX_i^l(Y^l-\hat{P}(Y^l=1|X^l,W))-\eta\lambda{w_i}\IEEEnonumber
 \end{IEEEeqnarray}
 where $\eta$ is a small constant which determines the step size.
 
-The actual implementation of Scikit-learn library includes multiple solvers, such as Stochastic Average Gradient (\verb|SAG|) descent, \verb|SAGA| and Broyden-Fletcher-Goldfarb-Shanno (\verb|LBFGS|).
+The actual implementation of Scikit-learn library includes multiple solvers,
+such as Stochastic Average Gradient (\verb|SAG|) descent, \verb|SAGA| and
+Broyden-Fletcher-Goldfarb-Shanno (\verb|LBFGS|).
 
 \subsubsection{Ensemble Methods}
 
-An ensemble of classifiers is a set of classifiers whose individual decisions are
-combined in some way typically by weighted or unweighted voting to classify
+An ensemble of classifiers is a set of classifiers whose individual decisions
+are combined in some way typically by weighted or unweighted voting to classify
 new examples\cite{dietterich2000ensemble}.
 
-\emph{Random forests}\cite{liaw2002classification} is an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set.
+\emph{Random forests}\cite{liaw2002classification} is an ensemble learning
+method for classification, regression and other tasks, that operate by
+constructing a multitude of decision trees at training time and outputting the
+class that is the mode of the classes (classification) or mean prediction
+(regression) of the individual trees. Random decision forests correct for
+decision trees' habit of overfitting to their training set.
 
 The algorithm for random forests is shown in \cref{algorf}.
 
@@ -85,8 +106,13 @@ The algorithm for random forests is shown in \cref{algorf}.
 \end{algorithmic}
 \end{algorithm}
 
-\emph{Gradient boosting}\cite{friedman2001greedy} is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiable loss function.
-The algorithm for random forests is shown in \cref{algogb}.
+\emph{Gradient boosting}\cite{friedman2001greedy} is a machine learning
+technique for regression and classification problems, which produces a
+prediction model in the form of an ensemble of weak prediction models,
+typically decision trees. It builds the model in a stage-wise fashion like
+other boosting methods do, and it generalizes them by allowing optimization of
+an arbitrary differentiable loss function. The algorithm for random forests is
+shown in \cref{algogb}.
 
 \begin{algorithm}[!ht]
 \caption{Algorithm for Gradient Boosting\cite{GB:Wikipedia}}\label{algogb}
@@ -111,6 +137,8 @@ The algorithm for random forests is shown in \cref{algogb}.
 \end{algorithmic}
 \end{algorithm}
 
-The implementation in Scikit-learn library of these two ensemble methods are \verb|RandomForestClassifier| and \verb|GradientBoostingClassifier| respectively.
+The implementation in Scikit-learn library of these two ensemble methods are
+\verb|RandomForestClassifier| and \verb|GradientBoostingClassifier|
+respectively.
 
 \end{document}
