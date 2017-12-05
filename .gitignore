@@ -1,7 +1,3 @@
-# Data is not tracked in git.
-data/
-
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
